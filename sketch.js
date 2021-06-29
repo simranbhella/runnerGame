@@ -12,10 +12,10 @@ var runners, runner1, runner2, runner3, runner4;
 var runner1Img, runner2Img, runner3Img, runner4Img, pathImg;
 
 function preload(){
-  runner1Img = loadAnimation("runnergame.gif");
-  runner2Img = loadAnimation("runergame1.gif")
-  runner3Img = loadAnimation("runergame2gif.gif")
-  runner4Img = loadAnimation("runergame3.gif")
+  runner1Img = loadImage("runner.png");
+  runner2Img = loadImage("runner.png")
+  runner3Img = loadImage("runner.png")
+  runner4Img = loadImage("runner.png")
  pathImg = loadImage("track.jpeg");
 
 }
@@ -30,7 +30,7 @@ function setup(){
 
 
 function draw(){
-  if(playerCount === 4){
+  if(playerCount === 3){
     game.update(1);
   }
   if(gameState === 1){

@@ -29,15 +29,16 @@ class Game {
         form.display();
       }
   
-      runner1 = createSprite(100,200);
-      runner1.setAnimation(runner1Img);
-      runner2 = createSprite(200,200);
-      runner2.setAnimation(runner2Img)
-      runner3 = createSprite(300,200);
-      runner3.setAnimation(runner3Img);
-      runner4 = createSprite(400,200);
-      runner4.setAnimation(runner4Img);
-      runners = [runner1, runner2, runner3, runner4];
+      runner1 = createSprite(500,200);
+      runner1.addImage(runner1Img);
+      runner1.scale = 0.5;
+      runner2 = createSprite(700,200);
+      runner2.addImage(runner2Img)
+      runner2.scale = 0.5
+      runner3 = createSprite(900,200);
+      runner3.addImage(runner3Img);
+      runner3.scale = 0.5
+      runners = [runner1, runner2, runner3];
     }
     play(){
       form.hide();
@@ -53,9 +54,9 @@ class Game {
         //index of the array
         var index = 0;
         background("black");
-        image(pathImg, 0, -windowHeight*4, windowWidth, windowHeight*5);
+        image(pathImg, 0, -windowHeight*4.5, windowWidth, windowHeight*5);
         //x and y position of the cars
-        var x = 200;
+        var x = 1000;
         var y;
   
         for(var plr in allPlayers){
